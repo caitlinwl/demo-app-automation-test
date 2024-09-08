@@ -1,5 +1,5 @@
 # demo-app-automation-test
-My Demo App Mobile Automation Test in Webdriver IO
+My Demo App Mobile Automation Test in Webdriver IO using TypeScript and Cucumber (Gherkin)
 
 Pre-requisites:
 - Visual Studio Code

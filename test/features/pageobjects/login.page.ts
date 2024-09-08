@@ -29,6 +29,10 @@ class LoginPage extends Page {
         return $(`~Login button`);
     }
 
+    public get loginErrorMsg () {
+        return $('//android.widget.TextView[@text="Provided credentials do not match any user in this service."]');
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password

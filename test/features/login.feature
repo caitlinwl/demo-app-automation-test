@@ -8,5 +8,7 @@ Feature: Login to My Demo App
     Then I click the Login Menu item and login with <username> and <password>
 
     Examples:
-      | username        | password      |
-      | bob@example.com | 10203040      |
+      | username          | password      |
+      | bob@example.com   | 10203040      |
+      #Locked out account
+      #| alice@example.com | 12345         | 
