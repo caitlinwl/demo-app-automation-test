@@ -33,7 +33,6 @@ jobs:
         unzip commandlinetools-linux.zip -d $HOME/android-sdk
         echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
         echo "export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_ENV
-        source $GITHUB_ENV
         sdkmanager --sdk_root=$ANDROID_HOME --update
         sdkmanager --sdk_root=$ANDROID_HOME "platforms;android-30" "build-tools;30.0.3"
 
