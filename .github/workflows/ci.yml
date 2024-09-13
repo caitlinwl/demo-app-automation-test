@@ -34,6 +34,21 @@ jobs:
       run: |
         curl -L -o Android-MyDemoAppRN.1.3.0.build-244.apk https://github.com/caitlinwl/demo-app-automation-test/releases/tag/v1.3.0/Android-MyDemoAppRN.1.3.0.build-244.apk
 
+    - name: Start Android Emulator
+      run: |
+          echo "Starting Android Emulator"
+          $ANDROID_HOME/emulator/emulator -avd test -no-snapshot-load -no-audio -no-boot-anim -gpu swiftshader_indirect &
+          timeout 60s adb wait-for-device
+          adb shell input keyevent 82
+      env:
+          ANDROID_HOME: ${{ secrets.ANDROID_HOME }}
+
+    #Install APK on emulator
+    - name: Install APK
+      run: adb install -r app.apk
+      env:
+          ANDROID_HOME: ${{ secrets.ANDROID_HOME }}
+
     - name: Run tests
       run: npx wdio run wdio.conf.ts
 
