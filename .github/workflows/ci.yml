@@ -29,10 +29,11 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y openjdk-11-jdk
         sudo apt-get install -y wget unzip
-        wget https://dl.google.com/android/repository/commandlinetools-linux-6858067_latest.zip
-        unzip commandlinetools-linux-6858067_latest.zip -d $HOME/android-sdk
+        wget -q https://dl.google.com/android/repository/commandlinetools-linux-*.zip -O commandlinetools-linux.zip
+        unzip commandlinetools-linux.zip -d $HOME/android-sdk
         echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
         echo "export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_ENV
+        source $GITHUB_ENV
         sdkmanager --sdk_root=$ANDROID_HOME --update
         sdkmanager --sdk_root=$ANDROID_HOME "platforms;android-30" "build-tools;30.0.3"
 
