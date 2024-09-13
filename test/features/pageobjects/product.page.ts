@@ -9,6 +9,10 @@ class ProductsPage extends Page {
      * define selectors using getter methods
      */
 
+    public get catalogLink () {
+        return $('//android.widget.TextView[@text="Catalog"]');
+    }
+
     public get productsHeading () {
         return $('//android.widget.TextView[@text="Products"]');
     }
