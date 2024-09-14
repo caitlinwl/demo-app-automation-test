@@ -1,7 +1,8 @@
+@regression
 Feature: Add Product to Cart
 
 @addproducttocart
-@regression
+@smoke
   Scenario Outline: As a user, I want to add a product to my cart
 
     Given My Demo app has loaded

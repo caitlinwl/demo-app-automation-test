@@ -1,7 +1,8 @@
+@regression
 Feature: Login to My Demo App
 
 @login
-@regression
+@smoke
   Scenario Outline: As a user, I can log into the my demo app
 
     Given My Demo app has loaded

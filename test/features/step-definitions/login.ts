@@ -8,5 +8,5 @@ Then(/^I click the Login Menu item and login with (.*) and (.+)$/, async (userna
     allure.addStep("Login menu item was clicked");
     await expect(LoginPage.loginHeading).toBeDisplayed();
     await LoginPage.login(username, password);
-    allure.addStep("I have entered my login details and have clicked the log in button");
+    allure.addStep("I have entered my login details and have clicked the login button");
 });
