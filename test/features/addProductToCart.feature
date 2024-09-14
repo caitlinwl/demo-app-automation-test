@@ -1,6 +1,7 @@
 Feature: Add Product to Cart
 
 @addproducttocart
+@regression
   Scenario Outline: As a user, I want to add a product to my cart
 
     Given My Demo app has loaded

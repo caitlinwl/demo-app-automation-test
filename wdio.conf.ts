@@ -48,7 +48,7 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -61,7 +61,7 @@ export const config: WebdriverIO.Config = {
         'appium:deviceName': 'Pixel 4a API 30',
         //'appium:platformVersion': '12.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': '/Downloads/Android-MyDemoAppRN.1.3.0.build-244.apk',
+        'appium:app': '/Downloads/Android-MyDemoAppRN.1.3.0.build-244.apk', //update location to where the app is located
         'appium:autoGrantPermissions': true
 
     }],
@@ -167,7 +167,7 @@ export const config: WebdriverIO.Config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '@login',
+        tagExpression: '', //@login
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.

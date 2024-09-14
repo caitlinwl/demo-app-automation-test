@@ -1,6 +1,7 @@
 Feature: Login to My Demo App
 
 @login
+@regression
   Scenario Outline: As a user, I can log into the my demo app
 
     Given My Demo app has loaded
@@ -11,4 +12,4 @@ Feature: Login to My Demo App
       | username          | password      |
       | bob@example.com   | 10203040      |
       #Locked out account
-      #| alice@example.com | 12345         | 
+      #| alice@example.com | 10203040      | 

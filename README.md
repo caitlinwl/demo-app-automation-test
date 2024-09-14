@@ -4,6 +4,12 @@ My Demo App Mobile Automation Test in Webdriver IO using TypeScript and Cucumber
 Pre-requisites:
 - Visual Studio Code
 - node.js
+- Android Studio (set up and run an emulated device using Device Manager) 
+
+In [wdio.conf.ts](wdio.conf.ts) update the `capabilities` to match the device emulator you have set up.
+
+To run a specific test, update the `tagExpression` in [wdio.conf.ts](wdio.conf.ts) with the test you want to run for example:
+tagExpression: '@login',
 
 To install wdio:
 - `npm init wdio .`
