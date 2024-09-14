@@ -48,11 +48,11 @@ jobs:
 
     - name: Start Emulator
       run: |
-        nohup emulator -avd test -no-window -no-audio -no-boot-anim > emulator.log 2>&1 &
+        nohup emulator -avd test -no-window -no-audio -no-boot-anim -gpu off > emulator.log 2>&1 &
         echo "Waiting for emulator to boot..."
         adb wait-for-device
         adb shell input keyevent 82
-        sleep 30
+        sleep 60
       env:
         ANDROID_HOME: /usr/local/lib/android/sdk
 
