@@ -8,7 +8,7 @@ Pre-requisites:
 
 In [wdio.conf.ts](wdio.conf.ts) update the `capabilities` to match the device emulator you have set up.
 
-To run a specific test, update the `tagExpression` in [wdio.conf.ts](wdio.conf.ts) with the test you want to run for example:
+All the tests are set to run but if you wan to run a specific test, update the `tagExpression` in [wdio.conf.ts](wdio.conf.ts) with the test you want to run for example:
 tagExpression: '@login',
 
 To install wdio:
