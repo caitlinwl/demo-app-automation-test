@@ -5,6 +5,7 @@ Pre-requisites:
 - Visual Studio Code
 - node.js
 - Android Studio (set up and run an emulated device using Device Manager) 
+- My Demo App v1.3.0 can be found under [Releases](https://github.com/caitlinwl/demo-app-automation-test/releases)
 
 In [wdio.conf.ts](wdio.conf.ts) update the `capabilities` to match the device emulator you have set up.
 
